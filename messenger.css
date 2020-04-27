@@ -15,6 +15,22 @@ html:not([dir=rtl]) .sidebar {
   background: green;
 }
 /* width */
+.threads-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+.threads-wrapper::-webkit-scrollbar-track {
+  background: rgba(226, 226, 226, 0.2);
+}
+/* Handle */
+.threads-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+/* Handle on hover */
+.threads-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #32327B;
+}
+/* width */
 .messages::-webkit-scrollbar {
   width: 5px;
 }
@@ -55,10 +71,11 @@ html:not([dir=rtl]) .sidebar {
 .threads-wrapper {
   height: calc(100% - 76px);
   overflow-y: auto;
+  padding-right: 7px;
 }
 .messenger-threads {
   width: 300px;
-  padding: 0 7px;
+  padding: 0 0 0 7px;
   float: left;
   height: calc(100vh - 55px);
   box-sizing: border-box;
@@ -73,6 +90,7 @@ html:not([dir=rtl]) .sidebar {
   color: #969696;
   overflow: hidden;
   border-radius: 5px;
+  margin-bottom: 3px;
 }
 .messenger-threads a.thread-link img {
   float: left;
