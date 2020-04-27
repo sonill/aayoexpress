@@ -13,6 +13,14 @@ html:not([dir=rtl]) .sidebar {
     margin-left: -200px !important;
 }
 
+.messenger-status-online{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background: green;
+}
+
 
 // custom scrollbar for messages -------------------------------------------
 
@@ -42,8 +50,6 @@ html:not([dir=rtl]) .sidebar {
 
 /* Handle on hover */
 .messenger-sidebar::-webkit-scrollbar-thumb:hover { background: #32327B }
-
-
 
 
 .messenger-section-heading{
@@ -121,6 +127,10 @@ html:not([dir=rtl]) .sidebar {
         font-size: 12px;
         color: #c1c1c1;
         text-align: center;
+    }
+
+    .start-conv.seen{
+        margin-bottom: 0;
     }
 
     .message-bubble{
@@ -341,6 +351,14 @@ html:not([dir=rtl]) .sidebar {
 
             li{
                 margin-bottom: 5px;
+                overflow: hidden;
+            }
+
+            .messenger-status-online{
+                height: 7px;
+                width: 7px;
+                float: right;
+                margin-top: 15px;
             }
         }
     }
