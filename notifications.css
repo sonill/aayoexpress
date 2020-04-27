@@ -17,6 +17,7 @@
   border: 0;
   background: none;
   color: #136cda;
+  outline: none !important;
 }
 .notification-header {
   padding: 8px 10px;
