@@ -104,6 +104,9 @@ html:not([dir=rtl]) .sidebar {
 .messenger-body .message-bubble {
   margin-bottom: 15px;
 }
+.messenger-body .message-bubble img.avatar {
+  margin-right: 10px;
+}
 .messenger-body .message-bubble p {
   background: #eee;
   padding: 12px 20px;
@@ -111,24 +114,35 @@ html:not([dir=rtl]) .sidebar {
   font-size: 14px;
   display: inline-block;
   margin: 0;
+  max-width: 60%;
+  position: relative;
 }
 .messenger-body .message-bubble p a {
   color: #136cda;
 }
 .messenger-body .message-bubble .delete {
-  background: none;
+  background: #fff;
   color: #000;
   font-size: 12px;
-  padding: 0;
+  padding: 2px 5px;
   margin-left: 15px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 0 #d6d6d6;
   border: 0;
-  visibility: hidden;
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 26%;
 }
 .messenger-body .message-bubble .delete:hover {
-  color: red;
+  background: red;
+  color: #fff;
 }
-.messenger-body .message-bubble:hover .delete {
-  visibility: visible;
+.messenger-body .message-bubble p:hover {
+  padding-right: 50px;
+}
+.messenger-body .message-bubble p:hover > .delete {
+  display: inline-block;
 }
 .messenger-body .message-bubble.reply {
   text-align: right;
@@ -139,7 +153,37 @@ html:not([dir=rtl]) .sidebar {
   border-radius: 15px 15px 0 15px;
 }
 .messenger-body .message-bubble.reply .delete {
-  margin-right: 15px;
+  right: inherit;
+  left: 0;
+}
+.messenger-body .message-bubble.reply p:hover {
+  padding-left: 50px;
+  padding-right: 20px;
+}
+.messenger-body .message-group .old {
+  margin-left: 50px;
+}
+.messenger-body .message-group .old p {
+  border-radius: 0 15px 15px 0;
+  margin-bottom: 2px;
+}
+.messenger-body .message-group .old p:first-child {
+  border-radius: 15px 15px 15px 0;
+}
+.messenger-body .message-group .message-bubble > p {
+  border-radius: 0 15px 15px 15px;
+}
+.messenger-body .message-group .reply .old {
+  margin-left: 50px;
+}
+.messenger-body .message-group .reply .old p {
+  border-radius: 15px 0 0 15px;
+}
+.messenger-body .message-group .reply .old p:first-child {
+  border-radius: 15px 15px 0 15px;
+}
+.messenger-body .message-group .reply > p {
+  border-radius: 15px 0  15px  15px;
 }
 .messenger-body .heading {
   margin: 0 0 10px;
