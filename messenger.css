@@ -160,6 +160,9 @@ html:not([dir=rtl]) .sidebar {
   padding-left: 50px;
   padding-right: 20px;
 }
+.messenger-body .message-bubble.reply p:hover .delete {
+  box-shadow: 1px 1px 0 #00000087;
+}
 .messenger-body .message-group .old {
   margin-left: 50px;
 }
