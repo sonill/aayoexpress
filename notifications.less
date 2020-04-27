@@ -1,3 +1,6 @@
+@link_color: #136cda;
+@accent_color: #32327B;
+
 .notification-btn{
     outline: none !important;
 }
@@ -7,6 +10,7 @@
     padding: 0;
     margin-top: 6px;
     box-shadow: 0 1px 3px 0px #00000052;
+    z-index: 99999;
     // border-color: #d0d0d0;
 }
 
@@ -18,7 +22,7 @@
         padding: 0;
         border: 0;
         background: none;
-        color: #136cda;
+        color: @link_color;
     }
 }
 
@@ -30,7 +34,7 @@
         font-weight: bold;
     }
 
-    .mark-as-read{
+    .mark-all-as-read{
         float: right;
     }
 }
@@ -58,17 +62,51 @@
     max-height: 400px;
     overflow-y: auto;
 
+    p.no-notification{
+        text-align: center;
+        padding: 7px 0;
+        margin: 0;
+    }
+
     a{
-        color: #4c4c4c;
+        color: #212121;
         text-decoration: none;
     }
 
     strong{
-        color: #212121;
+        // color: #212121;
+        font-weight: 600;
     }
 
     .preview{
         font-size: 13px;
+    }
+
+    .time{
+        color: #808080;
+        font-size: 12px;
+        display: inline-block;
+        margin: 5px 10px 0 0;
+    }
+
+    .mark-as-read{
+        font-size: 12px;
+        display: none;
+        color: #808080;
+    }
+
+    .mark-as-read:hover{
+        color: @link_color;
+    }
+
+    a:hover{
+        .mark-as-read{
+            display: inline;
+        }
+
+        dl.notification{
+            background: #ececec;
+        }
     }
 
 
@@ -101,7 +139,7 @@
     }
 
     dl.read{
-        background: #fff;
+        background: #fff !important;
     }
 
     a:last-child dl{

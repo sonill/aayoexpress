@@ -67,36 +67,43 @@
 
                         <div class="notification-header">
                             <span class="left">Notifications</span>
-                            <button type="button" class="mark-as-read">Mark all as read</button>
+                            <button type="button" class="mark-all-as-read">Mark all as read</button>
                         </div><!--top-bar-->
                         
                         <div class="notification-body">
+                            <p class="no-notification d-none">No new notification!</p>
+
                             <a href="#">
                                 <dl class="notification">
                                     <dt><i class="la la-user bg-danger"></i></dt>
                                     <dd>
                                         <strong class="name">Hari Prasad</strong><br>
                                         <span class="preview">This is a sample notification text This is a sample notification text This is a sample notification text This is a sample notification text</span><br>
+                                        <span class="time"><i class="la la-clock"></i> 2 hrs ago</span> 
+                                        <span><button type="button" class="mark-as-read">Mark as read</button></span>
                                     </dd>
                                 </dl> <!--notifications-->
                             </a>
+
 
                             <a href="#">
                                 <dl class="notification">
                                     <dt><i class="la la-user bg-primary"></i></dt>
                                     <dd>
-                                        <strong class="name">Hari Prasad</strong><br>
-                                        <span class="preview">This is a sample notification text</span><br>
+                                        <strong class="name">Hari Prasad</strong>, <strong>Ram Krishna Dhakal</strong> and <strong>Binita Sunar</strong> are friends now<br>
+                                        <span class="time"><i class="la la-clock"></i> 5 hrs ago</span>
+                                        <span><button type="button" class="mark-as-read">Mark as read</button></span>
                                     </dd>
                                 </dl> <!--notifications-->
                             </a>
 
                             <a href="#">
-                                <dl class="notification">
+                                <dl class="notification read">
                                     <dt><i class="la la-user bg-dark"></i></dt>
                                     <dd>
                                         <strong class="name">Hari Prasad</strong><br>
                                         <span class="preview">This is a sample notification text</span><br>
+                                        <span class="time"><i class="la la-clock"></i> 1 day ago</span>
                                     </dd>
                                 </dl> <!--notifications-->
                             </a>
@@ -107,6 +114,7 @@
                                     <dd>
                                         <strong class="name">Hari Prasad</strong><br>
                                         <span class="preview">This is a sample notification text</span><br>
+                                        <span class="time"><i class="la la-clock"></i> 2 days ago</span>
                                     </dd>
                                 </dl> <!--notifications-->
                             </a>
@@ -117,6 +125,8 @@
                                     <dd>
                                         <strong class="name">Hari Prasad</strong><br>
                                         <span class="preview">This is a sample notification text</span><br>
+                                        <span class="time"><i class="la la-clock"></i> 1 week ago</span>
+                                        <span><button type="button" class="mark-as-read">Mark as read</button></span>
                                     </dd>
                                 </dl> <!--notifications-->
                             </a>
@@ -127,6 +137,8 @@
                                     <dd>
                                         <strong class="name">Hari Prasad</strong><br>
                                         <span class="preview">This is a sample notification text</span><br>
+                                        <span class="time"><i class="la la-clock"></i> 2 weeks ago</span>
+                                        <span><button type="button" class="mark-as-read">Mark as read</button></span>
                                     </dd>
                                 </dl> <!--notifications-->
                             </a>
@@ -137,6 +149,8 @@
                                     <dd>
                                         <strong class="name">Hari Prasad</strong><br>
                                         <span class="preview">This is a sample notification text</span><br>
+                                        <span class="time"><i class="la la-clock"></i> 2 hrs ago</span>
+                                        <span><button type="button" class="mark-as-read">Mark as read</button></span>
                                     </dd>
                                 </dl> <!--notifications-->
                             </a>
@@ -147,6 +161,8 @@
                                     <dd>
                                         <strong class="name">Hari Prasad</strong><br>
                                         <span class="preview">This is a sample notification text</span><br>
+                                        <span class="time"><i class="la la-clock"></i> 2 hrs ago</span>
+                                        <span><button type="button" class="mark-as-read">Mark as read</button></span>
                                     </dd>
                                 </dl> <!--notifications-->
                             </a>
@@ -377,40 +393,35 @@
         </div>
     </footer>
 
-    <script type="text/javascript">
-        /* Recover sidebar state */
-        if (Boolean(sessionStorage.getItem('sidebar-collapsed'))) {
-            var body = document.getElementsByTagName('body')[0];
-            body.className = body.className.replace('sidebar-lg-show', '');
-        }
-
-        /* Store sidebar state */
-        var navbarToggler = document.getElementsByClassName("navbar-toggler");
-        for (var i = 0; i < navbarToggler.length; i++) {
-            navbarToggler[i].addEventListener('click', function (event) {
-                event.preventDefault();
-                if (Boolean(sessionStorage.getItem('sidebar-collapsed'))) {
-                    sessionStorage.setItem('sidebar-collapsed', '');
-                } else {
-                    sessionStorage.setItem('sidebar-collapsed', '1');
-                }
-            });
-        }
-    </script>
-
-    <script type="text/javascript"
-        src="https://aayo.express/packages/backpack/base/js/bundle.js?v=4.1.x-dev@78a89604e4d8571671bb9ec6f2d626a1e8150078"></script>
-    <!-- <script type="text/javascript" src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js?v=4.1.x-dev@78a89604e4d8571671bb9ec6f2d626a1e8150078"></script> -->
-    <!-- <script type="text/javascript" src="https://www.gstatic.com/firebasejs/7.8.2/firebase-messaging.js?v=4.1.x-dev@78a89604e4d8571671bb9ec6f2d626a1e8150078"></script> -->
-    <!-- <script type="text/javascript" src="https://js.pusher.com/5.1/pusher.min.js?v=4.1.x-dev@78a89604e4d8571671bb9ec6f2d626a1e8150078"></script> -->
-    <!-- <script type="text/javascript" src="https://aayo.express/js/firebase.js?v=4.1.x-dev@78a89604e4d8571671bb9ec6f2d626a1e8150078"></script> -->
-    <!-- <script type="text/javascript" src="https://aayo.express/js/pusher.js?v=4.1.x-dev@78a89604e4d8571671bb9ec6f2d626a1e8150078"></script> -->
-    <!-- <script type="text/javascript" src="https://aayo.express/js/crud.js?v=4.1.x-dev@78a89604e4d8571671bb9ec6f2d626a1e8150078"></script> -->
-
+    <script type="text/javascript" src="https://aayo.express/packages/backpack/base/js/bundle.js?v=4.1.x-dev@78a89604e4d8571671bb9ec6f2d626a1e8150078"></script>
 
     <script>
+
+        // added by Sanil Shakya
         jQuery(document).ready(function(){
             $('.notification-btn').dropdown('show');
+
+            // mark all as read
+            $('button.mark-all-as-read').click(function(){
+                $('.notification-body dl.notification').addClass('read');
+
+                // add some ajax calls here 
+                // to mark posts as read in database backends
+            })
+
+            // mark selected notification as read
+            $('button.mark-as-read').click(function(){
+                let $parents = $(this).parents('dl.notification');
+                $parents.addClass('read');
+
+                // add some ajax calls here 
+                // to mark posts as read in database backends
+            })
+
+            // prevent dropdown from closing when clicking button
+            $(document).on('click', '.dropdown-menu', function (e) {
+                e.stopPropagation();
+            });
         })
     </script>
 

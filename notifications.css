@@ -6,6 +6,7 @@
   padding: 0;
   margin-top: 6px;
   box-shadow: 0 1px 3px 0px #00000052;
+  z-index: 99999;
 }
 .notification-wrapper {
   width: 300px;
@@ -24,7 +25,7 @@
   color: #000;
   font-weight: bold;
 }
-.notification-header .mark-as-read {
+.notification-header .mark-all-as-read {
   float: right;
 }
 /* width */
@@ -50,15 +51,40 @@
   max-height: 400px;
   overflow-y: auto;
 }
+.notification-body p.no-notification {
+  text-align: center;
+  padding: 7px 0;
+  margin: 0;
+}
 .notification-body a {
-  color: #4c4c4c;
+  color: #212121;
   text-decoration: none;
 }
 .notification-body strong {
-  color: #212121;
+  font-weight: 600;
 }
 .notification-body .preview {
   font-size: 13px;
+}
+.notification-body .time {
+  color: #808080;
+  font-size: 12px;
+  display: inline-block;
+  margin: 5px 10px 0 0;
+}
+.notification-body .mark-as-read {
+  font-size: 12px;
+  display: none;
+  color: #808080;
+}
+.notification-body .mark-as-read:hover {
+  color: #136cda;
+}
+.notification-body a:hover .mark-as-read {
+  display: inline;
+}
+.notification-body a:hover dl.notification {
+  background: #ececec;
 }
 .notification-body dl.notification {
   padding: 10px;
@@ -80,7 +106,7 @@
   padding: 0 0 0 45px;
 }
 .notification-body dl.read {
-  background: #fff;
+  background: #fff !important;
 }
 .notification-body a:last-child dl {
   border: 0;
