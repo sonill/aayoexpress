@@ -117,12 +117,15 @@ html:not([dir=rtl]) .sidebar {
 }
 .messenger-body .message-bubble .delete {
   background: none;
-  color: red;
+  color: #136cda;
   font-size: 12px;
   padding: 0;
   margin-left: 15px;
   border: 0;
   visibility: hidden;
+}
+.messenger-body .message-bubble .delete:hover {
+  color: red;
 }
 .messenger-body .message-bubble:hover .delete {
   visibility: visible;
