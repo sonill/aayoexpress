@@ -141,7 +141,7 @@ html:not([dir=rtl]) .sidebar {
 
         .delete{
             background: none;
-            color: @link_color;
+            color: #000;
             font-size: 12px;
             padding: 0;
             margin-left: 15px;
@@ -234,13 +234,13 @@ html:not([dir=rtl]) .sidebar {
         color: #6f6f6f;
         padding: 20px 15px;
         border-bottom: solid 1px #ccc;
-        line-height: 1.3;
+        line-height: 1.5;
         font-size: 14px;
         
         strong {
             font-size: 25px;
             color: #000;
-            margin-top: 10px;
+            margin: 9px 0 5px;
             display: inline-block;
         }
 
@@ -257,8 +257,9 @@ html:not([dir=rtl]) .sidebar {
 
         ul.all-users{
             margin: 0;
-            padding: 0 0 0 20px;
+            padding: 0 ;
             line-height: 2;
+            list-style: none;
 
             a{
                 color: #000;
@@ -267,6 +268,14 @@ html:not([dir=rtl]) .sidebar {
 
             a:hover{
                 color: @link_color;
+            }
+
+            img{
+                margin-right: 7px;
+            }
+
+            li{
+                margin-bottom: 5px;
             }
         }
     }
