@@ -4,9 +4,17 @@
     margin-left: 0 !important;
   }
 }
-html:not([dir=rtl]) .sidebar {
+/* html:not([dir=rtl]) .sidebar {
   margin-left: -200px !important;
+} */
+
+.sidebar {
+  max-height: calc(100vh - 55px);
+  overflow-y: auto;
+  flex: 0 0 240px !important;
 }
+
+
 .messenger-status-online {
   width: 10px;
   height: 10px;
